@@ -1,0 +1,16 @@
+{% extends 'base_entry.html' %}
+{% load static %}
+
+{% block dash %}
+
+    <div class="container text-center mt-5">
+        <h1> Result hasn't been published yet. </h1>
+        <h5> Please refer to following sections for further knowledge. </h5></br></br>
+        <a href="{% url 'dashboard:dash' %}" class="btn btn-info"> Guideliness </a>
+        <a href="{% url 'dashboard:dash' %}" class="btn btn-success"> About Us </a>
+        <a href="{% url 'dashboard:vote' %}" class="btn btn-info"> Vote </a>
+     </div>
+
+
+
+{% endblock dash %}

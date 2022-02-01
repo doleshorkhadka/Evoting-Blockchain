@@ -1,0 +1,14 @@
+{% extends 'base_entry.html' %}
+{% load static %}
+
+{% block dash %}
+
+    <div class="container text-center mt-5">
+        <h1> Sorry !!! (Voting interrupted) You have already voted! </h1>
+        <h5> Please refer to query sections for further knowledge. </h5></br></br>
+        <a href="{% url 'dashboard:feedback' %}" class="btn btn-info"> Query </a>
+     </div>
+
+
+
+{% endblock dash %}

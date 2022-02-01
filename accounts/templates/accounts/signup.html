@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+     <div class="container">
+        <div class="row justify-content-around mt-5">
+          <div class="col-sm-4">
+               <h4><u>Register yourself </u></h4></br>
+               <p>Already have an account? <a href="{% url 'accounts:login' %}">Click here</a>  </p>
+               <form action="{% url 'accounts:signup' %}" method="post" enctype="multipart/form-data">
+                    {% load crispy_forms_tags %}
+                    {% csrf_token %} 
+                    <div class=form-group></br>
+                         <label> Citizenship/Passport.No </label></br>
+                         {{ form.username }}</br>
+                         <label> First Name </label></br>
+                         {{ form.first_name }}</br>
+                         <label> Last Name </label></br>
+                         {{ form.last_name }}</br>
+                         <label> Email </label></br>
+                         {{ form.email }}</br>
+                         {{ form.password1|as_crispy_field }}
+                         {{ form.password2|as_crispy_field }}
+                    </div></br>
+
+                    <div class=form-group></br>
+                         <u><h5> Additional KYC </h5></u></br>
+                         <label> Gender </label></br>
+                         {{ profile.gender }}</br>
+                         <label> Father's Name </label></br>
+                         {{ profile.father_name }}</br>
+                         <label> Grandfather's Name </label></br>
+                         {{ profile.grand_father_name }}</br>
+
+                         <label> Provience </label></br>
+                         {{ profile.provience_number }}</br>
+                         <label> District </label></br>
+                         {{ profile.district }}</br>
+                         <label> Phone Number </label></br>
+                         {{ profile.phone_number }}</br>
+                         <label> Date of Birth in BS </label></br>
+                         {{ profile.dob_bs }}</br>
+                         <label> Date of Birth in AD </label></br>
+                         {{ profile.dob_ad }}</br>
+                    </div>
+                    <div class=form-group></br>
+                         <u><h5> ++ Verification </h5></u></br>
+                         <label> Upload your Image </label></br>
+                         {{ profile.user_image }}</br></br></br>
+                         <h6> Upload scanned copy of your Citizenship/ Driving Liscense/ Passport </h6></br>
+                         <label> Document Front </label>
+                         {{ profile.docs_front }}</br></br>
+                         <label> Document Back </label>
+                         {{ profile.docs_back }}</br></br>
+                    </div>
+                    <input type="submit" value="signup" class="btn btn-primary col-3">
+               </form>
+          </div>
+        </div>
+     </div>
+</br>
+</br>
+</br>
+</br>
+</br>
+{% endblock content %}
