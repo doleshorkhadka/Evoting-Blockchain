@@ -1,0 +1,44 @@
+{% extends 'base_entry.html' %}
+
+{% block dash %}
+<style>
+
+    #special{
+        display: inline-block;
+        width: 30%;
+        margin:auto;
+
+    }
+    #candidate{
+        width: 49%;
+        float: left;
+        list-style-type: none;
+    }
+    #result{
+        width: 40%;
+        float: right;
+        text-align: center;
+        list-style-type: ':';
+    }
+    
+
+</style>
+
+
+<center>
+<h1> Results: </h1> 
+<ul id="special">
+    <div id="candidate">
+    {% for ram in candidates %}
+    <li > {{ ram }}  </li>
+    {% endfor %}
+</div>
+<div id="result">
+    {% for key in result %}
+    <li> {{ key }}  </li>
+    {% endfor %}
+</div>
+</ul>
+</center>
+
+{% endblock dash %} 

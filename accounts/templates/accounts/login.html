@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+     <div class="container">
+          <div class="row justify-content-around mt-5">
+               <div class="col-sm-4">
+                    <h4><u> Log in </u></h4></br>
+                    {% load crispy_forms_tags %}
+                    <form action="{% url 'accounts:login' %}" method="post">
+                         {% csrf_token %}
+                         <label> Citizenship/Passport.No is your username </label></br>
+                         {{ form.username|as_crispy_field }}</br>
+                         {{ form.password|as_crispy_field }}
+                         <input type="submit" value="Login" class="btn btn-primary col-3"></br></br>
+                         <p> Don't have an account? <a href="{% url 'accounts:signup' %}"> Click here </a> </p>
+                    </form>
+               </div>
+          </div>
+     </div>
+{% endblock content %}

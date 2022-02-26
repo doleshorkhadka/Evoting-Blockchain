@@ -1,0 +1,39 @@
+{% extends 'base_entry.html' %}
+{% load static %}
+
+{% block dash %}
+<center>
+    <h1> Results: </h1> 
+    <div id="container" style="width: 50%;">
+        <canvas id="pie-chart"></canvas>
+      </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+      <script>
+    
+        var config = {
+          type: 'pie',
+          data: {
+            datasets: [{
+              data: {{ result|safe }},
+              backgroundColor: [
+                '#007bff', '#fdcf70', '#A9A9A9', '#C0C0C0', '#D3D3D3'
+              ],
+              label: 'Population'
+            }],
+            labels: {{ candidate|safe }}
+          },
+          options: {
+            responsive: true
+          }
+        };
+    
+        window.onload = function() {
+          var ctx = document.getElementById('pie-chart').getContext('2d');
+          window.myPie = new Chart(ctx, config);
+        };
+    
+      </script>
+
+</center>
+{% endblock dash %}
