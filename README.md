@@ -12,22 +12,22 @@
 In the context of Nepal, Government uses traditional booth voting system which can be
 easily modified and changed. The research of the traditional booth voting system leads us
 to point out the following demerits:
-- Expensive
-- Insecure (as we heard booth capturing news)
-- Time consuming
-- Faults may rise in counting process
+    - Expensive
+    - Insecure (as we heard booth capturing news)
+    - Time consuming
+    - Faults may rise in counting process
 So, to overcome the mentioned problem the government should goes for alternative way
 i.e Electronic voting system. In centralized electronic voting system following problem
 might arise:
-- Data can be changed
-- Multiple entries can be registered
-- Manipulation of the result
-- Hacking of the entire system
+    - Data can be changed
+    - Multiple entries can be registered
+    - Manipulation of the result
+    - Hacking of the entire system
 At last government should adapt the E-voting system which contains decentralized
 database. For this purpose, our web app is suitable as it overcomes all the problems stated
 below and has the following features:
-- User friendly website with the ongoing elections list.
-- Clock counting Deadline time
-- E-pamphlets of all political parties involved in elections.
-- On screen result
-- Confidential Personal Info keeping and viewing at any time.
+    - User friendly website with the ongoing elections list.
+    - Clock counting Deadline time
+    - E-pamphlets of all political parties involved in elections.
+    - On screen result
+    - Confidential Personal Info keeping and viewing at any time.
