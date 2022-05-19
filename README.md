@@ -29,7 +29,7 @@ might arise:
     - `Hacking of the entire system`
 
 ## Development Methodology
-- `Waterfall Development Model`
+### Waterfall Development Model
 <img src="/media/readmeimg/waterflow.png" alt="WATERFLOW MODEL"/>
 
 ## Use-Case Diagram
@@ -41,11 +41,10 @@ might arise:
 ## Process Modelling using DFD diagram
 <img src="/media/readmeimg/dfd.png" alt="DFD Diagram"/>
 
-## System Design
-### Database Design
+## System Database Design
 <img src="/media/readmeimg/database.png" alt="Database Design Diagram"/>
 
-### Flow Chart
+## System Flow Chart
 <img src="/media/readmeimg/flowchart.png" alt="FlowChart Diagram"/>
 
 ## Implementation
@@ -69,5 +68,5 @@ cast the votes. Finally, the election officer involved helps to publish the resu
 after the time limit ends.
 
 ## Refrence to Docs 
--Report: https://github.com/SUNILkhadka/Evoting-Blockchain/blob/main/Docs/Project-report-echunab-final.pdf
--Proposal: https://github.com/SUNILkhadka/Evoting-Blockchain/blob/main/Docs/Proposal-echunab.pdf
+- Report: https://github.com/SUNILkhadka/Evoting-Blockchain/blob/main/Docs/Project-report-echunab-final.pdf
+- Proposal: https://github.com/SUNILkhadka/Evoting-Blockchain/blob/main/Docs/Proposal-echunab.pdf
