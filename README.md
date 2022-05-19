@@ -10,7 +10,7 @@
 Information Technology (B.Sc. CSIT) **
 
 ## Introduction
-`“eChunab”` is an online web based voting system which allows specific audience or mass public to cast their vote safely and easily without breaking the daily routine. The web app can be used for specific institutions to choose their position and also used for nationwide elections for choosing the best leaders. As there are numerous disadvantages and bugs in the electronic voting system, our system is designed using a blockchain technology which is a secure and robust system that ensures anonymity of the voter, transparency in the process, robust Functioning and the decentralized system.The use of Ethereum on our web app enables the deployment of smart contracts and decentralized applications (dapps) to be built and ensure that the app will run without any interference from a third party. Also the transaction of the ethereum is fast which ensures the less time requirement for the voters to cast their vote and calculate the end result. The another purpose of using the transaction of ethereum is that it cannot be modified, hacked and controlled by intruder which makes the voting process transparent and legit. The electoral framework will have a node in every region to ensure that the system decentralized. This system can be used for a small scale organization. The blockchain technology and Face Detection is executed in web3.js and Python using the Flask framework respectively. The web page to caste vote is developed using HTML, CSS, and javascript along with the nodejs.User friendly web page ensure interactive site for casting votes and displaying outcomes and other essential information such as profile, candidate political background, the agenda of different political parties. The web page gives unquestionable visions for both nominees and voters. The two main module of our system are listed below:
+`“eChunab”` is an online web based voting system which allows specific audience or mass public to cast their vote safely and easily without breaking the daily routine. The web app can be used for specific institutions to choose their position and also used for nationwide elections for choosing the best leaders. As there are numerous disadvantages and bugs in the electronic voting system, our system is designed using a blockchain technology which is a secure and robust system that ensures anonymity of the voter, transparency in the process, robust Functioning and the decentralized system.The use of Ethereum on our web app enables the deployment of smart contracts and decentralized applications (dapps) to be built and ensure that the app will run without any interference from a third party. Also the transaction of the ethereum is fast which ensures the less time requirement for the voters to cast their vote and calculate the end result. The another purpose of using the transaction of ethereum is that it cannot be modified, hacked and controlled by intruder which makes the voting process transparent and legit. The electoral framework will have a node in every region to ensure that the system decentralized. This system can be used for a small scale organization. The blockchain technology and Face Detection is executed in web3.js and Python using the Flask framework respectively. The web page gives unquestionable visions for both nominees and voters. The two main module of our system are listed below:
 
 - `Registration`: The sign-up feature along with face recognition for voters is set before the voting procedure starts. This features gathers the personal information which at last use for verification process.
 
@@ -27,35 +27,13 @@ might arise:
     - `Multiple entries can be registered`
     - `Manipulation of the result`
     - `Hacking of the entire system`
-At last government should adapt the E-voting system which contains decentralized
-database. For this purpose, our web app is suitable as it overcomes all the problems stated
-below and has the following features:
-    - `User friendly website with the ongoing elections list`
-    - `Clock counting Deadline time`
-    - `E-pamphlets of all political parties involved in elections`
-    - `On screen result`
-    - `Confidential Personal Info keeping and viewing at any time`
 
 ## Development Methodology
 - `Waterfall Development Model`
-It is a SDLC which is simple to understand and use. In waterfall model, each phase must
-be completed before the next phase i.e. phases cannot overlap. In this approach, the
-outcome of the one phases acts as an input for the next phase in a sequential way. Due to
-this linear sequential flow, it is sometimes called as Linear-Sequential Life Cycle Model.
-The following figure shows the different figure involved in waterfall model
 <img src="/media/readmeimg/waterflow.png" alt="WATERFLOW MODEL"/>
 
 ## Use-Case Diagram
 <img src="/media/readmeimg/usecase.png" alt="Use-case Diagram"/>
-
-## Feasibility Analysis
-- `Schedule Feasibility`
-It is the probability of a project to be completed within its scheduled time limits. The project
-completed on-time has high schedule feasibility. The project will be unsuccessful if it takes 
-13 longer timeframe than it was estimated. The following gantt chart shows eChunab is
-accomplished on the given time interval which proves that it is feasible in terms of the
-schedule.
-<img src="/media/readmeimg/gantt.png" alt="Gantt Chart Diagram"/>
 
 ## Data Modelling using ER diagram
 <img src="/media/readmeimg/er.png" alt="ER Diagram"/>
@@ -64,7 +42,7 @@ schedule.
 <img src="/media/readmeimg/dfd.png" alt="DFD Diagram"/>
 
 ## System Design
-**Database Design**
+### Database Design
 <img src="/media/readmeimg/database.png" alt="Database Design Diagram"/>
 
 ### Flow Chart
@@ -72,14 +50,15 @@ schedule.
 
 ## Implementation
 ### `Tools Used:`
-- `Solidity`
-- `Python`
-- `Django`
-- `Java Script:`
+- `Solidity` (to write smart contract)
+- `Python` (to communicate with blockchain and for backend and frontend API calls)
+- `Django` (base framework for web develovement)
+- `Java Script` (testing and result formulating)
 
 **`Besides these other most important tools and technologies implemented in the system are:`**
-- `Truffle`
-- `Etherium`
+- `Truffle` (creates migrations of smart contracts to the network)
+- `Etherium` (blockchain technology)
+- `Ganache` (framework that creates virtual local etherium network and support transactions)
 
 ## Conclusion:
 This project simplifies the process of polling and counting votes and hence provide the
@@ -90,5 +69,5 @@ cast the votes. Finally, the election officer involved helps to publish the resu
 after the time limit ends.
 
 ## Refrence to Docs 
-    -Report: https://github.com/SUNILkhadka/Evoting-Blockchain/blob/main/Docs/Project-report-echunab-final.pdf
-    -Proposal: https://github.com/SUNILkhadka/Evoting-Blockchain/blob/main/Docs/Proposal-echunab.pdf
+-Report: https://github.com/SUNILkhadka/Evoting-Blockchain/blob/main/Docs/Project-report-echunab-final.pdf
+-Proposal: https://github.com/SUNILkhadka/Evoting-Blockchain/blob/main/Docs/Proposal-echunab.pdf
