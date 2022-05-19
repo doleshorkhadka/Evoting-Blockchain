@@ -47,10 +47,10 @@ be completed before the next phase i.e. phases cannot overlap. In this approach,
 outcome of the one phases acts as an input for the next phase in a sequential way. Due to
 this linear sequential flow, it is sometimes called as Linear-Sequential Life Cycle Model.
 The following figure shows the different figure involved in waterfall model
-<img src="/media/readmeimg/waterflow.PNG" alt="WATERFLOW MODEL"/>
+<img src="/media/readmeimg/waterflow.png" alt="WATERFLOW MODEL"/>
 
 ## Use-Case Diagram
-<img src="/media/readmeimg/usecase.PNG" alt="Use-case Diagram"/>
+<img src="/media/readmeimg/usecase.png" alt="Use-case Diagram"/>
 
 ## Feasibility Analysis
 Feasibility study is a high-level capsule version of the entire system analysis and design
@@ -65,20 +65,20 @@ completed on-time has high schedule feasibility. The project will be unsuccessfu
 13 longer timeframe than it was estimated. The following gantt chart shows eChunab is
 accomplished on the given time interval which proves that it is feasible in terms of the
 schedule.
-<img src="/media/readmeimg/gantt.PNG" alt="Gantt Chart Diagram"/>
+<img src="/media/readmeimg/gantt.png" alt="Gantt Chart Diagram"/>
 
 ## Data Modelling using ER diagram
-<img src="/media/readmeimg/er.PNG" alt="ER Diagram"/>
+<img src="/media/readmeimg/er.png" alt="ER Diagram"/>
 
 ## Process Modelling using DFD diagram
-<img src="/media/readmeimg/dfd.PNG" alt="DFD Diagram"/>
+<img src="/media/readmeimg/dfd.png" alt="DFD Diagram"/>
 
 ## System Design
 **Database Design**
-<img src="/media/readmeimg/design.PNG" alt="Database Design Diagram"/>
+<img src="/media/readmeimg/design.png" alt="Database Design Diagram"/>
 
 **Flow Chart**
-<img src="/media/readmeimg/flowchart.PNG" alt="FlowChart Diagram"/>
+<img src="/media/readmeimg/flowchart.png" alt="FlowChart Diagram"/>
 
 ## Implementation
 **`Tools Used:`**
