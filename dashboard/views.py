@@ -47,21 +47,21 @@ def Vote(request,pk):
     
 
 def Result(request):
-    is_sts = Election.objects.get(id=1)
-    if is_sts.status==False:
-        try:
-            result = functions.final_result()
-        except:
-            return render(request,'noVote.html')
-        # result = functions.final_result(request)
-        # candidates = functions.final_result()['candidates']
-        # return render(request,'Result.html',{ 'result' : result,'candidates':candidates})
-        return render(request,'Result.html',{
-                            'candidate': result['candidates'],
-                            'result': result['result']
-                            })
-    else:
-        return render(request,'noResult.html')
+    # is_sts = Election.objects.get(id=1)
+    # if is_sts.status==False:
+    try:
+        result = functions.final_result()
+    except:
+        return render(request,'noVote.html')
+    # result = functions.final_result(request)
+    # candidates = functions.final_result()['candidates']
+    # return render(request,'Result.html',{ 'result' : result,'candidates':candidates})
+    return render(request,'Result.html',{
+                        'candidate': result['candidates'],
+                        'result': result['result']
+                        })
+    # else:
+    #     return render(request,'noResult.html')
         
     
 
