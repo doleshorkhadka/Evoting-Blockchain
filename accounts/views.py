@@ -60,12 +60,6 @@ def login_view(request):
     return render(request,'accounts/login.html',{'form':form})
 
 def logout_view(request):
-
-    # Form POST banako bela ra yo jhan secure method ho #
-    # if request.method == 'POST': #
-    #     logout(request) #
-    #     return redirect('landing_page') #
-
     logout(request)
     messages.info(request, 'Logout Successfully.')
     return redirect('landing_page')
@@ -76,14 +70,13 @@ def address_creation():
     print("Assigning addresses to the users")
     # ganache_url = "http://127.0.0.1:8545"
     # web3 = Web3(Web3.HTTPProvider(ganache_url))
-    for x in range(24,24+len(users)):
+    for x in range(100):
         # address = web3.toChecksumAddress(account['address'])
         try: 
             obj = Profile.objects.get(id = x)
-            obj.token = accounts[x-24]
+            obj.token = accounts[x]
             obj.save()
-            print('address assigned to ',x)
+            print('address assigned to ',users[x])
         except:
-            print("user not valid",x)
             if x >= 100:
                 break

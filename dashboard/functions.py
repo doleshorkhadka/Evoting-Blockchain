@@ -2,6 +2,7 @@ from django.shortcuts import render
 from web3 import Web3
 import json
 from .models import Candidate
+from officer.models import Election
 
 # Initalizing connection with ganache .
 ganache_url = "http://127.0.0.1:8545"
@@ -44,36 +45,25 @@ tx_for_vote = {
 }
 
 def add_Candidate(cand):
-    # for x in cand:
-    #     ListOfCandidate.append(x.name)
-    # for x in range(len(ListOfCandidate)):
-    #     print('candidate added',x,str(ListOfCandidate[x]))
-    #     MyContract.functions.addCandidate(str(ListOfCandidate[x])).transact(tx)
-    
-    for x in cand:
-        print('candidate added',x.name)
-        MyContract.functions.addCandidate(x.name).transact(tx)
+	is_sts = Election.objects.get(id=1)
+	if (is_sts.status):
+		print("Candidate already added to Blockchain !")
+	else:
+		for x in cand:
+			print('candidate added',x.name)
+			MyContract.functions.addCandidate(x.name).transact(tx)
+		is_sts.status = True
+		is_sts.save()
+
+
 
 def new_accounts():
      return accounts[0]
 
-# Adding candidates to the Blockchain
-# if not ListOfCandidate:
-# 		add_Candidate(MyContract,accounts)
 
-# def deployContract(Voter_name):
-# 	#Function Calls
-# 	res = {}
-# 	res = Transactions(Voter_name)
-# 	return res
-
-#after the address is assigned add this to the Transaction sunctions
 
 def Transactions(Voter_name,user_token):
 	print("Transactions is up")
-	print(ListOfCandidate)
-	# c_user = request.User
-	# print(c_user.id)
 	for x in range(len(ListOfCandidate)):
 		print(ListOfCandidate[x])
 		if str(ListOfCandidate[x]) == str(Voter_name):
@@ -94,17 +84,3 @@ def final_result():
 	result['result']= results
 	print("Result: ",result)
 	return (result)
-
-# def res_Candidate(request):
-#     MyContract.functions.resetCandidate().call(tx)
-#     print("Reset complete")
-
-# def plotResult(request,result):
-# 	plt.plot(result)
-# 	fig = plt.gcf()
-# 	buf = io.BytesIO()
-# 	fig.savefig(buf,format='png')
-# 	buf.seek(0)
-# 	string = base64.b64encode(buf.read())
-# 	uri = urllib.parse.quote(string)
-# 	return uri

@@ -1,5 +1,3 @@
-from queue import PriorityQueue
-from django.contrib.auth.forms import AuthenticationForm
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from .models import Candidate
@@ -26,8 +24,6 @@ def votes(request):
     
 # @login_required(login_url="/accounts/submitvote")
 def Vote(request,pk):
-    # can = Vote.objects.get(pk=pkd)
-
     Voted_name = Candidate.objects.get(id=pk)
     user_token = Profile.objects.get(user=request.user)
     tok = user_token.token
@@ -38,30 +34,25 @@ def Vote(request,pk):
             voted.append(tok)
             hashr = functions.Transactions(Voted_name,user_token.token)
             print(hashr)
-            is_sts = Election.objects.get(id=1)
-            is_sts.user_sts = True
-            is_sts.save()
             return render(request, 'Voted.html')
     except:
         return render(request, 'alreadyVoted.html')
     
 
 def Result(request):
-    # is_sts = Election.objects.get(id=1)
-    # if is_sts.status==False:
-    try:
-        result = functions.final_result()
-    except:
-        return render(request,'noVote.html')
-    # result = functions.final_result(request)
-    # candidates = functions.final_result()['candidates']
-    # return render(request,'Result.html',{ 'result' : result,'candidates':candidates})
-    return render(request,'Result.html',{
-                        'candidate': result['candidates'],
-                        'result': result['result']
-                        })
-    # else:
-    #     return render(request,'noResult.html')
+    is_sts = Election.objects.get(id=1)
+    if (is_sts.status):
+        return render(request,'noResult.html')
+    else:
+        try:
+            result = functions.final_result()
+        except:
+            print('Error in results.')
+            return render(request,'noResult.html')
+        return render(request,'Result.html',{
+                            'candidate': result['candidates'],
+                            'result': result['result']
+                            })
         
     
 

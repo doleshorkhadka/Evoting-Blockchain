@@ -7,13 +7,6 @@ from .forms import AddCandidate,AddUser
 from .decorators import *
 from dashboard.functions import add_Candidate
 from .models import Election
-# Global variable for Election Status
-# try:
-#     if (Election == True or Election == False) :
-#         pass
-# except NameError :
-#     print("Globlal Election Status Variable Decleared.")
-#     Election = False 
 
 # Create your views here.
 @allowed_users(allowed_roles=['Admin', 'Staff'])
@@ -72,7 +65,6 @@ def edit_candidate(request, id):
         return redirect('/officer/candidates')
 
     context["form"] = form
- 
     return render(request, "officer/edit-candidate.html", context)
 
 
@@ -139,9 +131,6 @@ def Approved_candidate(request):
 
 @allowed_users(allowed_roles=['Admin', 'Staff'])
 def start_election(request):
-    is_sts = Election.objects.get(id=1)
-    is_sts.status = True
-    is_sts.save()
     address_creation()
     Approved_candidate(request)
     return redirect('/officer/')
@@ -150,15 +139,8 @@ def start_election(request):
 def end_election(request):
     is_sts = Election.objects.get(id=1)
     is_sts.status = False
+    is_sts.isCandidateAdded = False
     is_sts.save()
     return redirect('/officer/')
-
-# def comformation(request):
-#     is_sts = Election.objects.get(id=1)
-#     return render(request,'/officer/comform.html',{'status':is_sts.status})
-
-# def reset(request):
-#     res_Candidate(request)
-#     return redirect('/officer/candidates')
 
 
