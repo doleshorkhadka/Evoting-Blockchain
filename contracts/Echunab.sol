@@ -23,11 +23,7 @@ contract Evoting{
         	_;
     }
 	
-	// function addcandidate() public
-	// 	{
-	// 		addCandidate("Sunil Khadka");
-	// 		addCandidate("Doleshor Khadka");
-	// 	}
+
 	function addCandidate
 		(
 			string memory _name

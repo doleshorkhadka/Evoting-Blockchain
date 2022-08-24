@@ -70,7 +70,7 @@ def address_creation():
     print("Assigning addresses to the users")
     # ganache_url = "http://127.0.0.1:8545"
     # web3 = Web3(Web3.HTTPProvider(ganache_url))
-    for x in range(1):
+    for x in range(100):
         # address = web3.toChecksumAddress(account['address'])
         try: 
             obj = Profile.objects.get(id = x)
